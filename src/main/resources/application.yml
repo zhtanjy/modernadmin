@@ -1,2 +1,8 @@
 server:
   port: 8300
+spring:
+  datasource:
+    url: jdbc:h2:~/modernadmin
+    username: sa
+    password: 123456
+    driver-class-name: org.h2.Driver

@@ -1,0 +1,4 @@
+insert into USER (ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED)
+ values ( '2','bbb','2','123456789','123456789' );
+insert into USER (ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED)
+ values ( '3','ccc','3','123456789','123456789' );
