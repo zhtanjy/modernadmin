@@ -9,7 +9,6 @@
 * [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data)
 
 ### 工具
-* [H2 Database](http://www.h2database.com/html/main.html)
 * [flyway](https://flywaydb.org/)
    数据库管理版本工具
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
@@ -18,42 +17,24 @@
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
 ### 操作要点
-* H2 引入项目
-    [maven h2](https://mvnrepository.com/artifact/com.h2database/h2)
-```xml
-<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
-<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <version>1.4.200</version>
-    <scope>test</scope>
-</dependency>
-```
+
 * Flyway
+pom.xml配置
 ```xml
 <project xmlns="...">
     ...
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>6.3.2</version>
-                <configuration>
-                    <url>jdbc:h2:file:./target/foobar</url>
-                    <user>sa</user>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.197</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.flywaydb</groupId>
+                    <artifactId>flyway-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </build>
 </project>
 
 ```
-1. 
