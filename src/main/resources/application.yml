@@ -2,9 +2,9 @@ server:
   port: 8300
 spring:
   datasource:
-    url: jdbc:mysql://14.116.***.***:3306/modern
+    url: jdbc:mysql://14.116.147.38:3306/modern
     username: root
-    password: ******
+    password: 2290914
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:    ## 设定 flyway 属性
     clean-disabled: true # flyway 的 clean 命令会删除指定 schema 下的所有 table, 杀伤力太大了, 应该禁掉.
